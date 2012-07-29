@@ -1,9 +1,9 @@
 package ExpenseTracker::Routes;
 {
-  $ExpenseTracker::Routes::VERSION = '0.001';
+  $ExpenseTracker::Routes::VERSION = '0.002';
 }
 {
-  $ExpenseTracker::Routes::VERSION = '0.001';
+  $ExpenseTracker::Routes::VERSION = '0.002';
 }
 
 use Mojo::Util qw/camelize/;
@@ -72,6 +72,6 @@ ExpenseTracker::Routes - separate the routes adding from the main app module
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =cut

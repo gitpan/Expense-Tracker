@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::Currency;
 {
-  $ExpenseTracker::Controllers::Currency::VERSION = '0.001';
+  $ExpenseTracker::Controllers::Currency::VERSION = '0.002';
 }
 {
-  $ExpenseTracker::Controllers::Currency::VERSION = '0.001';
+  $ExpenseTracker::Controllers::Currency::VERSION = '0.002';
 }
 use Mojo::Base 'ExpenseTracker::Controllers::Base';
 
