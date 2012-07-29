@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::Site;
 {
-  $ExpenseTracker::Controllers::Site::VERSION = '0.1';
+  $ExpenseTracker::Controllers::Site::VERSION = '0.2';
 }
 {
-  $ExpenseTracker::Controllers::Site::VERSION = '0.1';
+  $ExpenseTracker::Controllers::Site::VERSION = '0.2';
 }
 use Mojo::Base 'Mojolicious::Controller';
 
@@ -14,3 +14,15 @@ sub welcome{
 }
 
 1;
+
+__END__
+=pod
+ 
+=head1 NAME
+ExpenseTracker::Controllers::Site
+
+=head1 VERSION
+
+version 0.2
+
+=cut

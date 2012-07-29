@@ -1,9 +1,9 @@
 package ExpenseTracker::Routes;
 {
-  $ExpenseTracker::Routes::VERSION = '0.1';
+  $ExpenseTracker::Routes::VERSION = '0.2';
 }
 {
-  $ExpenseTracker::Routes::VERSION = '0.1';
+  $ExpenseTracker::Routes::VERSION = '0.2';
 }
 
 use Mojo::Util qw/camelize/;
@@ -63,3 +63,15 @@ sub _add_routes_authorization {
 }
 
 1;
+
+__END__
+=pod
+ 
+=head1 NAME
+ExpenseTracker::Routes - separate the routes adding from the main app module
+
+=head1 VERSION
+
+version 0.2
+
+=cut

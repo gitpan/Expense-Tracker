@@ -1,9 +1,9 @@
 package ExpenseTracker;
 {
-  $ExpenseTracker::VERSION = '0.1';
+  $ExpenseTracker::VERSION = '0.2';
 }
 {
-  $ExpenseTracker::VERSION = '0.1';
+  $ExpenseTracker::VERSION = '0.2';
 }
 use Mojo::Base 'Mojolicious';
 use ExpenseTracker::Models;
@@ -80,3 +80,16 @@ sub user{
 }
 
 1;
+
+__END__
+=pod
+ 
+=head1 NAME
+ExpenseTracker - main app file
+
+
+=head1 VERSION
+
+version 0.2
+
+=cut
