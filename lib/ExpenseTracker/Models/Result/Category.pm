@@ -1,10 +1,10 @@
 use utf8;
 package ExpenseTracker::Models::Result::Category;
 {
-  $ExpenseTracker::Models::Result::Category::VERSION = '0.2';
+  $ExpenseTracker::Models::Result::Category::VERSION = '0.3';
 }
 {
-  $ExpenseTracker::Models::Result::Category::VERSION = '0.2';
+  $ExpenseTracker::Models::Result::Category::VERSION = '0.3';
 }
 
 # Created by DBIx::Class::Schema::Loader
@@ -16,7 +16,7 @@ ExpenseTracker::Models::Result::Category
 
 =head1 VERSION
 
-version 0.2
+version 0.3
 
 =cut
 
