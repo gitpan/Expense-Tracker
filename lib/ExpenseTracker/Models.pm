@@ -1,10 +1,10 @@
 use utf8;
 package ExpenseTracker::Models;
 {
-  $ExpenseTracker::Models::VERSION = '0.3';
+  $ExpenseTracker::Models::VERSION = '0.001';
 }
 {
-  $ExpenseTracker::Models::VERSION = '0.3';
+  $ExpenseTracker::Models::VERSION = '0.001';
 }
 
 # Created by DBIx::Class::Schema::Loader
