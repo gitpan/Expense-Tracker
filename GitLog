@@ -1,9 +1,46 @@
 ==================================================
-Changes from 2011-07-30 00:00:00 +0000 to present.
+Changes from 2011-07-31 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.003 at 2012-07-29 14:00:32 +0000
+version 0.004 at 2012-07-30 22:35:37 +0000
+------------------------------------------
+
+  Change: 231ae8fff782443c15a0dde9beb5e94d0db179d1
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-30 15:13:15 +0000
+
+    Merge pull request #2 from tudorconstantin/tudor
+
+    Tudor - Login functionality 
+
+  Change: 97128c1091c1d371d667a3522208d05d040ef3e2
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-31 00:59:28 +0000
+
+    the User controller 
+
+  Change: 6b35ee1b2661cf41450ef608dc1fecff0d0717cd
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-31 00:58:55 +0000
+
+    added user tudor/123 in sqlite, got the login functionality and the
+    User resource 
+
+  Change: 75823239df1ea102894df02b2168d17d6b01aba9
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-31 00:15:19 +0000
+
+    login functionality: Controller, template 
+
+  Change: 56c565155dfc8a0b463508fd3062110f5aadaa34
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-30 20:37:48 +0000
+
+    added support for authenticated users 
+
+------------------------------------------
+version 0.003 at 2012-07-29 14:00:27 +0000
 ------------------------------------------
 
   Change: a4831048547048403d47c79abbecbade7dd44ecb

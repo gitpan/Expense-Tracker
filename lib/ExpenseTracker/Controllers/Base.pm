@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::Base;
 {
-  $ExpenseTracker::Controllers::Base::VERSION = '0.003';
+  $ExpenseTracker::Controllers::Base::VERSION = '0.004';
 }
 {
-  $ExpenseTracker::Controllers::Base::VERSION = '0.003';
+  $ExpenseTracker::Controllers::Base::VERSION = '0.004';
 }
 
 use strict;

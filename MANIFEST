@@ -16,7 +16,9 @@ dist.ini
 lib/ExpenseTracker.pm
 lib/ExpenseTracker/Controllers/Base.pm
 lib/ExpenseTracker/Controllers/Currency.pm
+lib/ExpenseTracker/Controllers/Login.pm
 lib/ExpenseTracker/Controllers/Site.pm
+lib/ExpenseTracker/Controllers/User.pm
 lib/ExpenseTracker/Models.pm
 lib/ExpenseTracker/Models/Result/Category.pm
 lib/ExpenseTracker/Models/Result/Currency.pm
@@ -57,4 +59,5 @@ t/release-pod-coverage.t
 t/release-pod-syntax.t
 templates/layouts/default.html.ep
 templates/layouts/starter.html.ep
+templates/login/login.html.ep
 templates/site/welcome.html.ep
