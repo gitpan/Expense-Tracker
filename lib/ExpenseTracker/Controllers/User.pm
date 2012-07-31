@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::User;
 {
-  $ExpenseTracker::Controllers::User::VERSION = '0.004';
+  $ExpenseTracker::Controllers::User::VERSION = '0.005';
 }
 {
-  $ExpenseTracker::Controllers::User::VERSION = '0.004';
+  $ExpenseTracker::Controllers::User::VERSION = '0.005';
 }
 use Mojo::Base 'ExpenseTracker::Controllers::Base';
 
@@ -29,6 +29,6 @@ ExpenseTracker::Controllers::User - Controller responsible for the User resource
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =cut

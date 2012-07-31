@@ -1,9 +1,51 @@
 ==================================================
-Changes from 2011-07-31 00:00:00 +0000 to present.
+Changes from 2011-08-01 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.004 at 2012-07-30 22:35:37 +0000
+version 0.005 at 2012-07-31 20:24:06 +0000
+------------------------------------------
+
+  Change: 232f8e23b3afd69503819ace5e1d03058e5f84d6
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-31 13:19:10 +0000
+
+    Merge pull request #3 from tudorconstantin/tudor
+
+    Tudor - working generic base controller for RESTful actions 
+
+  Change: e6c73b30db40e9cec16a5f52612073f7f23e7dd2
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-31 23:15:42 +0000
+
+    some db modifications during development 
+
+  Change: 50e14fba2fb580bdc84f7ead864407bcd6a1b3fe
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-31 23:15:15 +0000
+
+    implemented the update method 
+
+  Change: 21688e7840455966c248cfa88015693ce6ea25b4
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-31 22:49:01 +0000
+
+    implemented the logic for DELETE requests 
+
+  Change: fcba17d40cbcf1171a49c468acb0ddb234d05f5b
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-31 22:48:24 +0000
+
+    put into configuration file the base_url for api - /api in our case 
+
+  Change: 0843e9e7e3bc0f5ed24edb7c428ab6b3c11049cc
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-07-31 21:47:04 +0000
+
+    implemented generic list method 
+
+------------------------------------------
+version 0.004 at 2012-07-30 22:13:15 +0000
 ------------------------------------------
 
   Change: 231ae8fff782443c15a0dde9beb5e94d0db179d1

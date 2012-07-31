@@ -1,9 +1,9 @@
 package ExpenseTracker;
 {
-  $ExpenseTracker::VERSION = '0.004';
+  $ExpenseTracker::VERSION = '0.005';
 }
 {
-  $ExpenseTracker::VERSION = '0.004';
+  $ExpenseTracker::VERSION = '0.005';
 }
 use Mojo::Base 'Mojolicious';
 use ExpenseTracker::Models;
@@ -92,7 +92,7 @@ sub startup {
 
   my $routes_params = {
     app_routes            => $r,
-    api_base_url          => '/api',
+    api_base_url          => $self->{config}->{api}->{base_url},
     controllers_namespace => 'ExpenseTracker::Controllers',
     resource_names        => [ qw/category operation currency operations_category user / ],
   };
@@ -122,6 +122,6 @@ ExpenseTracker - main app file
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =cut
