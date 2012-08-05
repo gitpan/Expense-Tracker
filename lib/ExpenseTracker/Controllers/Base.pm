@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::Base;
 {
-  $ExpenseTracker::Controllers::Base::VERSION = '0.005';
+  $ExpenseTracker::Controllers::Base::VERSION = '0.006';
 }
 {
-  $ExpenseTracker::Controllers::Base::VERSION = '0.005';
+  $ExpenseTracker::Controllers::Base::VERSION = '0.006';
 }
 
 use strict;
@@ -15,12 +15,22 @@ use Mojo::Util;
 
 use DBIx::Class::ResultClass::HashRefInflator;
 
+sub new{
+  my $self = shift;
+  
+  my $obj = $self->SUPER::new(@_);
+  
+  $obj->_after_init();
+  
+  return $obj;
+}
+
 sub create{
   my $self = shift;
   
   my $result = $self->app->model
     ->resultset( $self->{resource} )    
-    ->create( $self->req->json );   
+    ->create( $self->{_payload} );   
 
   return $self->render_json( $result->{_column_data} );
 }
@@ -34,10 +44,8 @@ sub update{
         { id => $self->param('id') },         
     );
   
-  return $self->render_not_found if ( scalar( ( $result_rs->all ) ) == 0 );
+  return $self->render_not_found if ( scalar( ( $result_rs->all ) ) == 0 );  
   
-  #default - until implementing the generic default
-  $self->{_payload} ||= $self->req->json;
   $result_rs->update_all( $self->{_payload} );
   
   $result_rs->result_class('DBIx::Class::ResultClass::HashRefInflator');
@@ -91,6 +99,14 @@ sub remove{
   my $resource_name = Mojo::Util::decamelize( ( split '::', $self->{resource} )[-1] );
   return $self->redirect_to( $self->url_for( "list_$resource_name" ) ) ;
 }
+
+sub _after_init{
+  my $self = shift;
+  
+  $self->{_payload} ||= ( $self->req->json or '' );
+
+}
+
 1;
 
 __END__
@@ -101,6 +117,6 @@ ExpenseTracker::Controllers::Base - base controller that provides the generic RE
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =cut

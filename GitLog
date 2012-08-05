@@ -1,9 +1,71 @@
 ==================================================
-Changes from 2011-08-01 00:00:00 +0000 to present.
+Changes from 2011-08-06 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.005 at 2012-07-31 20:24:06 +0000
+version 0.006 at 2012-08-05 15:42:56 +0000
+------------------------------------------
+
+  Change: 5ff711593104ba569a61ef03af6ae3d962f41dec
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-05 08:40:34 +0000
+
+    Merge pull request #4 from tudorconstantin/tudor
+
+    Tudor overridable payload data sample of default action overriding 
+
+  Change: ad4282662a5e9a6be754df4154c12d6bc48fd6c3
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-05 18:23:20 +0000
+
+    sample of default behavior override 
+
+  Change: ac14b1b5ef9baf2fe4b156d53ca37087ba3c3bb9
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-05 17:54:00 +0000
+
+    generic overridable acces to request body 
+
+  Change: 7da293364cc2ebbd81b98c953a37f91c29eea147
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-04 11:09:12 +0000
+
+    added doc skeleton 
+
+  Change: 88644232bbd62d3415105f7aa8b5b94a53ebae9c
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-04 10:35:11 +0000
+
+    bugfix - login/logout functionality 
+
+  Change: 315ae9f538a524e48b459111852626cf115c38fc
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-04 10:04:13 +0000
+
+    changed the url from the ribbon to point correctly to the present
+    repository 
+
+  Change: 8d477985cf77ab47fae3c74104d6606061981045
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-04 10:02:39 +0000
+
+    bugfix - correctly access the exposed resource names from config 
+
+  Change: f80254694b2840626b4c914b4c1104710018b516
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-04 10:01:39 +0000
+
+    moved require.js to layouts/default.html.ep - this is the generic
+    layout, used by all the views 
+
+  Change: 93aa549665c82ad5e413a61f4ca1ce8c2385781d
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-04 09:50:20 +0000
+
+    moved exposed resource names into config 
+
+------------------------------------------
+version 0.005 at 2012-07-31 20:19:10 +0000
 ------------------------------------------
 
   Change: 232f8e23b3afd69503819ace5e1d03058e5f84d6

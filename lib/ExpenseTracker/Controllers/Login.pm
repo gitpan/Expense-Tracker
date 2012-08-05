@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::Login;
 {
-  $ExpenseTracker::Controllers::Login::VERSION = '0.005';
+  $ExpenseTracker::Controllers::Login::VERSION = '0.006';
 }
 {
-  $ExpenseTracker::Controllers::Login::VERSION = '0.005';
+  $ExpenseTracker::Controllers::Login::VERSION = '0.006';
 }
 use Mojo::Base 'ExpenseTracker::Controllers::Base';
 
@@ -21,6 +21,10 @@ sub auth {
     $self->authenticate( $self->param('username'), $self->param('password') )
     )
   {
+    push(
+      @{ $self->session->{success_messages} },
+      sprintf('Welcome %s', $self->app->user->username)
+    );
     $self->redirect_to('/');
   }
   else {
@@ -60,6 +64,6 @@ ExpenseTracker::Controllers::Login - Controller responsible for login/logout ope
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =cut
