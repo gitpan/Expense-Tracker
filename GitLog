@@ -1,9 +1,257 @@
 ==================================================
-Changes from 2011-08-06 00:00:00 +0000 to present.
+Changes from 2011-09-03 00:00:00 +0000 to present.
 ==================================================
 
 ------------------------------------------
-version 0.006 at 2012-08-05 15:42:56 +0000
+version 0.007 at 2012-09-02 16:53:59 +0000
+------------------------------------------
+
+  Change: 84a45b63e4473e7a00d6a1d3994a794254a01930
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 14:01:14 +0000
+
+    Merge pull request #12 from tudorconstantin/backend_tests
+
+    Backend tests - BDD users and login 
+
+  Change: 2860dd10dcdec12601453d058e632a3dcec6a140
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 23:59:05 +0000
+
+    deploy a new schema when testing 
+
+  Change: e546e9bc39c7982aa48ac9f46e8856d549091e62
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 23:58:16 +0000
+
+    override the create() method to insert the md5_hex() value for user
+    password 
+
+  Change: be027ebe6f3da7eb5e502fa893711920d4a1c5bc
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 22:15:24 +0000
+
+    added the test DB 
+
+  Change: b1f9fcdbcfab51d4172f237ba4b6613b2f7de2b5
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 22:14:20 +0000
+
+    made the app environment (production/development/test) aware 
+
+  Change: 090a1c395f9858312e29a1c934f556ef100da04e
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 11:53:33 +0000
+
+    Merge pull request #11 from tudorconstantin/master
+
+    add the _before_create and _before_update methods to Base controller 
+
+  Change: a8e198c000cf8ec8ed580926280fe54ca224ef4c
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 21:41:33 +0000
+
+    added tests for show() and delete() operations 
+
+  Change: cbf1b4b75cde6e1260540e52d6563488ab4d6fe4
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 20:50:46 +0000
+
+    fixed bug related to generic check for found resource in show()
+    method 
+
+  Change: 6480388b31bf4c250963f76bb87aec8e504d7dc3
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 20:47:27 +0000
+
+    return a single object when call "show" instead of an array 
+
+  Change: 6ed6a09a3478e0c15f93d7f096de26d50bca1aaa
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 19:38:32 +0000
+
+    added _before_create and _before_update to the base controller and
+    set created_at and updated_at in them if the model has those columns 
+
+  Change: b6c31f7ce02c2a245006163c80d0fa216b52c817
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 04:28:20 +0000
+
+    Merge pull request #9 from tudorconstantin/backend_tests
+
+    Backend tests - BDD currencies 
+
+  Change: fd56c0ad14632f006fc6ce0f6777a69e7f28c201
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 14:26:44 +0000
+
+    added BDD tests for create/retrieve of currencies 
+
+  Change: 32d05fdeb822cff2377e704a9dcfb468994e108e
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 14:14:35 +0000
+
+    override the create method to add value for created_at 
+
+  Change: f135766479f585d62235a899518e6da5ae21f154
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 14:13:51 +0000
+
+    added DateTime as a dependency 
+
+  Change: ad00a66fb25af8fdbcc96e672dcab64804fc01ee
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 13:16:52 +0000
+
+    added Lingua::EN::Inflect::Phrase as a dependency - used for tests to
+    singularize resource names 
+
+  Change: 919f964773f35fe528696f1c3ac8d6620bec0055
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 13:16:20 +0000
+
+    changed the url name for authenticate 
+
+  Change: cf212b13c9b7d9bb33f0f6882008ac08d2fe5fbd
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 11:23:15 +0000
+
+    pretty print for mojo.feature 
+
+  Change: 956a321365dcf5867b3b37a68ac35c35f07ec003
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 10:37:36 +0000
+
+    all tests are passing now 
+
+  Change: 7e2da67bc56ac3aaf4e7ac65e7c913b1edbe30ac
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 08:47:21 +0000
+
+    fixed the 'when i go to ...' scenarios 
+
+  Change: 3de9d2204214b30e93c286abdce5ce9fec134a5a
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 08:26:23 +0000
+
+    added Lingua::EN::Inflect to the dependencies 
+
+  Change: 7504f8cbeb2f32358d8325f81482f7e9688f2fb4
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 08:21:39 +0000
+
+    added a sanity check in basic.t 
+
+  Change: 8f6f9db546258427107632db3e9669e683d8b3d0
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-09-01 08:19:31 +0000
+
+    fixed the basic.t test 
+
+  Change: af8abcde2b06075c7f1027bb629c78e7a7001550
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-30 22:56:23 +0000
+
+    removed some commit logs 
+
+  Change: 1607141425b0b37204fa527498d8922c239f8048
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-30 22:53:24 +0000
+
+    added the POC data, and solved some flow issues 
+
+  Change: 254e8bc7f758942a529be57a7dbd9570fbcc0746
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-30 21:49:55 +0000
+
+    fixed the router error 
+
+  Change: cd8c4a5022b0381d7249c3a2d2ea74ca0e53d8c5
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-30 21:44:29 +0000
+
+    just some edits 
+
+  Change: 389b1a4781df452db019fb25ee170ec93e561be1
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-30 21:43:38 +0000
+
+    fixed some bugs 
+
+  Change: 36f4e467a90b6e401bb8fb9f1620b67a51b11416
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-30 18:18:06 +0000
+
+    solved collection bug - returned wrong scope object 
+
+  Change: 9a8ac848e98937cc37e71916806b41a63535885f
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-30 18:14:59 +0000
+
+    added require.js 2.0.6 
+
+  Change: 172d35a1ac92cbc0e5162805c68bcd14452d4f35
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-30 07:56:15 +0000
+
+    removed unused plugin 
+
+  Change: ca64ce2248ce7435f9b4a625a688006e2a6f067f
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-29 22:55:54 +0000
+
+    Merge branch 'master' of github.com:tudorconstantin/expense-tracker 
+
+  Change: ceec8c36c06130d29ddc918c7eb2a510fdab1ef1
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-29 22:20:09 +0000
+
+    fixed the dependency issue 
+
+  Change: 902efdfb013399cf61696da2834ba6ede774d095
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-29 11:33:15 +0000
+
+    Merge pull request #6 from tudorconstantin/tudor
+
+    proper pluralization in names for routes 
+
+  Change: fffc33adf37562dd9dc0491e698e3b219e0a2c63
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-29 21:04:12 +0000
+
+    proper pluralization in names for routes 
+
+  Change: 6770efa6c792dbb9b0be2a5eb65ff99260c3d19b
+  Author: Andrei Ursan <ursan.andrei@gmail.com>
+  Date : 2012-08-28 21:55:58 +0000
+
+    added expense entity on backbone -- needs more work 
+
+  Change: 13ceab281732777a31ca422287c3595fb58d9a34
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-13 13:15:32 +0000
+
+    Merge pull request #5 from tudorconstantin/tudor
+
+    Tudor - added some categories into DB modified the Category resource
+    to return data according to [Backbone
+    Treeview](https://github.com/minism/backbone-treeview) interface 
+
+  Change: c3a0d34a15f9992e1ffd7f2a277a4d7e7c6d41d8
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-13 23:08:00 +0000
+
+    added the show and update method for category 
+
+  Change: 673b62df8ae8b561daed8b8900cab82ee20c05c8
+  Author: Tudor Constantin <tudorconstantin@gmail.com>
+  Date : 2012-08-13 21:19:55 +0000
+
+    made the Category model to work with DBIx::Class::Tree::AdjacencyList 
+
+------------------------------------------
+version 0.006 at 2012-08-05 15:40:34 +0000
 ------------------------------------------
 
   Change: 5ff711593104ba569a61ef03af6ae3d962f41dec

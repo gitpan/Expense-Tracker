@@ -1,11 +1,12 @@
 package ExpenseTracker::Controllers::Currency;
 {
-  $ExpenseTracker::Controllers::Currency::VERSION = '0.006';
+  $ExpenseTracker::Controllers::Currency::VERSION = '0.007';
 }
 {
-  $ExpenseTracker::Controllers::Currency::VERSION = '0.006';
+  $ExpenseTracker::Controllers::Currency::VERSION = '0.007';
 }
 use Mojo::Base 'ExpenseTracker::Controllers::Base';
+use DateTime;
 
 sub new{
   my $self = shift;
@@ -29,6 +30,6 @@ ExpenseTracker::Controllers::Currency - Controller responsible for the Currency 
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =cut

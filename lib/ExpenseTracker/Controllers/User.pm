@@ -1,11 +1,12 @@
 package ExpenseTracker::Controllers::User;
 {
-  $ExpenseTracker::Controllers::User::VERSION = '0.006';
+  $ExpenseTracker::Controllers::User::VERSION = '0.007';
 }
 {
-  $ExpenseTracker::Controllers::User::VERSION = '0.006';
+  $ExpenseTracker::Controllers::User::VERSION = '0.007';
 }
 use Mojo::Base 'ExpenseTracker::Controllers::Base';
+use Digest::MD5 qw(md5_hex);
 
 sub new{
   my $self = shift;
@@ -30,6 +31,12 @@ sub update{
   return $self->SUPER::update(@_);
 }
 
+sub _before_create{
+  my $self = shift;
+  
+  $self->{_payload}->{password} = Digest::MD5::md5_hex( $self->{_payload}->{password} );
+}
+
 1;
 
 __END__
@@ -41,6 +48,6 @@ ExpenseTracker::Controllers::User - Controller responsible for the User resource
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =cut

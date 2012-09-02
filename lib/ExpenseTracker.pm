@@ -1,9 +1,9 @@
 package ExpenseTracker;
 {
-  $ExpenseTracker::VERSION = '0.006';
+  $ExpenseTracker::VERSION = '0.007';
 }
 {
-  $ExpenseTracker::VERSION = '0.006';
+  $ExpenseTracker::VERSION = '0.007';
 }
 use Mojo::Base 'Mojolicious';
 use ExpenseTracker::Models;
@@ -80,12 +80,12 @@ sub startup {
   #set location for controllers
   $r->namespace('ExpenseTracker::Controllers');
   
-  $r->route('/')->to("site#welcome");
+  $r->route('/')->to("site#welcome")->name('home');
 
   #routes to user controller
   $r->route('/login')->to('login#login')->name('login');
   $r->route('/logout')->to('login#logout')->name('logout');
-  $r->route('/authenticate')->to('login#auth')->name('authenticate');
+  $r->route('/authenticate')->to('login#auth')->name('authenticate_html');
 
   my $api_routes = $r->route('/api')->over( authenticated => 1 );
 
@@ -94,6 +94,7 @@ sub startup {
     api_base_url          => $self->{config}->{api}->{base_url},
     controllers_namespace => 'ExpenseTracker::Controllers',
     resource_names        => [ split ' ', $self->{config}->{expose_resources} ],
+    app                   => $self,
   };
   
   ExpenseTracker::Routes->create_routes( $routes_params );
@@ -122,6 +123,6 @@ ExpenseTracker - main app file
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =cut

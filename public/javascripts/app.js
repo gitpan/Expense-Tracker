@@ -2,12 +2,18 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'routers/expenses_router',
   'bootstrap'
-], function($, _, Backbone){
-	App = {
+], function($, _, Backbone, ExpensesRouter){
+	var App = {
     start: function(){          
-    	console.log("apps start");
+    	
+      console.log("apps start");
+
+      var expensesRouter = new ExpensesRouter;
+
+      Backbone.history.start();
     }
-  }
+  };
   return App;
 });

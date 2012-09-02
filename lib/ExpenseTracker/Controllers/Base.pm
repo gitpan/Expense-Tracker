@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::Base;
 {
-  $ExpenseTracker::Controllers::Base::VERSION = '0.006';
+  $ExpenseTracker::Controllers::Base::VERSION = '0.007';
 }
 {
-  $ExpenseTracker::Controllers::Base::VERSION = '0.006';
+  $ExpenseTracker::Controllers::Base::VERSION = '0.007';
 }
 
 use strict;
@@ -12,8 +12,11 @@ use warnings;
 use Mojo::Base 'Mojolicious::Controller';
 use Mojo::JSON;
 use Mojo::Util;
+use DateTime;
 
 use DBIx::Class::ResultClass::HashRefInflator;
+use Lingua::EN::Inflect qw/PL/;
+
 
 sub new{
   my $self = shift;
@@ -27,6 +30,8 @@ sub new{
 
 sub create{
   my $self = shift;
+  
+  $self->_before_create( @_ );
   
   my $result = $self->app->model
     ->resultset( $self->{resource} )    
@@ -70,16 +75,16 @@ sub list{
 sub show{
   my $self = shift;
   
-  my @result = $self->app->model
+  my $result = $self->app->model
       ->resultset( $self->{resource} )
       ->search_rs(
           { id => $self->param('id') },
           { result_class => 'DBIx::Class::ResultClass::HashRefInflator' },
       )
-      ->all;  
+      ->first;  
   
-  return $self->render_not_found if ( scalar( @result == 0 ) );
-  return $self->render_json( [ @result ] );
+  return $self->render_not_found if ( ref $result eq 'HASHREF' );
+  return $self->render_json( $result );
 }
 
 sub remove{
@@ -97,7 +102,7 @@ sub remove{
   $result_rs->delete_all;
   
   my $resource_name = Mojo::Util::decamelize( ( split '::', $self->{resource} )[-1] );
-  return $self->redirect_to( $self->url_for( "list_$resource_name" ) ) ;
+  return $self->redirect_to( $self->url_for( 'list_'.PL( $resource_name ) ) ) ;
 }
 
 sub _after_init{
@@ -105,6 +110,23 @@ sub _after_init{
   
   $self->{_payload} ||= ( $self->req->json or '' );
 
+}
+
+sub _before_create{
+  my $self = shift;
+  
+  my $now = DateTime->now ;
+  
+  $self->{_payload}->{created_at} = ''.$now if ( 'created_at' ~~ [ $self->app->model->resultset( $self->{resource} )->result_source->columns ] );  
+  $self->{_payload}->{updated_at} = ''.$now if ( 'updated_at' ~~ [ $self->app->model->resultset( $self->{resource} )->result_source->columns ] );
+}
+
+sub _before_update{
+my $self = shift;
+  
+  my $now = DateTime->now ;  
+  
+  $self->{_payload}->{updated_at} = ''.$now if ( 'updated_at' ~~ [ $self->app->model->resultset( $self->{resource} )->result_source->columns ] );
 }
 
 1;
@@ -117,6 +139,6 @@ ExpenseTracker::Controllers::Base - base controller that provides the generic RE
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =cut

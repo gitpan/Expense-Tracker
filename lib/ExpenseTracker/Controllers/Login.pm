@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::Login;
 {
-  $ExpenseTracker::Controllers::Login::VERSION = '0.006';
+  $ExpenseTracker::Controllers::Login::VERSION = '0.007';
 }
 {
-  $ExpenseTracker::Controllers::Login::VERSION = '0.006';
+  $ExpenseTracker::Controllers::Login::VERSION = '0.007';
 }
 use Mojo::Base 'ExpenseTracker::Controllers::Base';
 
@@ -64,6 +64,6 @@ ExpenseTracker::Controllers::Login - Controller responsible for login/logout ope
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =cut

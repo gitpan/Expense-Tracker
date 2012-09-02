@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::Site;
 {
-  $ExpenseTracker::Controllers::Site::VERSION = '0.006';
+  $ExpenseTracker::Controllers::Site::VERSION = '0.007';
 }
 {
-  $ExpenseTracker::Controllers::Site::VERSION = '0.006';
+  $ExpenseTracker::Controllers::Site::VERSION = '0.007';
 }
 use Mojo::Base 'Mojolicious::Controller';
 
@@ -23,6 +23,6 @@ ExpenseTracker::Controllers::Site
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =cut

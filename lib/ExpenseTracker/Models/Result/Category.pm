@@ -1,10 +1,10 @@
 use utf8;
 package ExpenseTracker::Models::Result::Category;
 {
-  $ExpenseTracker::Models::Result::Category::VERSION = '0.006';
+  $ExpenseTracker::Models::Result::Category::VERSION = '0.007';
 }
 {
-  $ExpenseTracker::Models::Result::Category::VERSION = '0.006';
+  $ExpenseTracker::Models::Result::Category::VERSION = '0.007';
 }
 
 # Created by DBIx::Class::Schema::Loader
@@ -16,7 +16,7 @@ ExpenseTracker::Models::Result::Category
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =cut
 
@@ -99,11 +99,12 @@ __PACKAGE__->set_primary_key("id");
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
+__PACKAGE__->load_components(qw( Tree::AdjacencyList ));
+ __PACKAGE__->parent_column('parent_id');
+ __PACKAGE__->repair_tree( 1 );
+
 
 __PACKAGE__->belongs_to(user => 'ExpenseTracker::Models::Result::User', 'user_id');
-__PACKAGE__->has_many(children => 'ExpenseTracker::Models::Result::Category', 'parent_id');
-__PACKAGE__->belongs_to(parent => 'ExpenseTracker::Models::Result::Category', 'parent_id');
-
 __PACKAGE__->has_many(operations_category => 'ExpenseTracker::Models::Result::OperationsCategory', 'category_id');
 __PACKAGE__->many_to_many(operations => 'operations_category', 'operation');
 

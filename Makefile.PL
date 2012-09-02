@@ -23,9 +23,13 @@ my %WriteMakefileArgs = (
     "DBD::SQLite" => 0,
     "DBI" => 0,
     "DBIx::Class" => 0,
+    "DBIx::Class::Tree::AdjacencyList" => 0,
+    "DateTime" => 0,
     "Digest::MD5" => 0,
     "File::Find" => 0,
     "FindBin::libs" => 0,
+    "Lingua::EN::Inflect" => 0,
+    "Lingua::EN::Inflect::Phrase" => 0,
     "Mojolicious" => 0,
     "Mojolicious::Plugin::Authentication" => 0,
     "Mojolicious::Plugin::YamlConfig" => 0,
@@ -33,7 +37,7 @@ my %WriteMakefileArgs = (
     "YAML" => 0,
     "YAML::XS" => 0
   },
-  "VERSION" => "0.006",
+  "VERSION" => "0.007",
   "test" => {
     "TESTS" => "t/*.t"
   }
