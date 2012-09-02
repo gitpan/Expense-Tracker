@@ -1,9 +1,9 @@
 package ExpenseTracker::Controllers::Category;
 {
-  $ExpenseTracker::Controllers::Category::VERSION = '0.007';
+  $ExpenseTracker::Controllers::Category::VERSION = '0.008';
 }
 {
-  $ExpenseTracker::Controllers::Category::VERSION = '0.007';
+  $ExpenseTracker::Controllers::Category::VERSION = '0.008';
 }
 use Mojo::Base 'ExpenseTracker::Controllers::Base';
 
@@ -96,6 +96,6 @@ ExpenseTracker::Controllers::Category - Controller responsible for the Category 
 
 =head1 VERSION
 
-version 0.007
+version 0.008
 
 =cut
